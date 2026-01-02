@@ -1,0 +1,108 @@
+body {
+    background: var(--cor-fundo-pagina);
+    margin: 0;
+    padding: 0;
+}
+
+#chatForm {
+    width: 75%;
+    min-width: 375px;
+    max-width: 700px;
+}
+
+input {
+    border-radius: 20px 0 0 20px;
+    background: var(--cor-fundo-chat);
+    color: var(--cor-texto-chat);
+}
+
+button {
+    padding: 10px;
+    background: var(--cor-fundo-mensagem-usuario);
+    border: none;
+    border-radius: 0 20px 20px 0;
+    color: var(--cor-texto-chat);
+}
+
+.chatbox {
+    width: 75%;
+    min-width: 375px;
+    max-width: 700px;
+    height: calc(100vh - 60px);
+    background: var(--cor-fundo-chat);
+    border-radius: 15px;
+}
+
+.mensagem {
+    border-radius: 15px;
+    max-width: 70%;
+    width: fit-content;
+    word-break: break-word;
+    position: relative;
+}
+
+.usuario {
+    background: var(--cor-fundo-mensagem-usuario);
+    border-radius: 15px 15px 15px 15px;
+}
+
+.usuario::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -10px; /* Fora do container para a seta aparecer na direita */
+    transform: translateY(-50%);
+    border: 10px solid transparent;
+    border-left-color: var(--cor-fundo-mensagem-usuario); /* Cor da seta */
+    border-right: 0;
+}
+
+.bot {
+    background: var(--cor-fundo-mensagem-bot);
+    border-radius: 15px 15px 15px 15px;
+}
+
+.bot::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -10px; /* Fora do container para a seta aparecer na esquerda */
+    transform: translateY(-50%);
+    border: 10px solid transparent;
+    border-right-color: var(--cor-fundo-mensagem-bot); /* Cor da seta */
+    border-left: 0;
+}
+
+.mensagem p {
+    color: var(--cor-texto-chat);
+}
+
+a {
+    text-decoration: none;
+    color: #f08135;
+}
+
+a:hover {
+    color: #f08135;
+    text-decoration: underline;
+    opacity: 0.5;
+}
+
+.chatbox ::-webkit-scrollbar {
+    width: 12px;
+}
+
+.chatbox ::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.chatbox ::-webkit-scrollbar-thumb {
+    background-color: var(--cor-fundo-pagina);
+    border-radius: 10px;
+    border: 3px solid;
+}
+
+.chatbox {
+    scrollbar-width: thin;
+    scrollbar-color: var(--cor-fundo-pagina);
+}
